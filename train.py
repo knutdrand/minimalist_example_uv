@@ -18,7 +18,7 @@ def train(train_data_path, model_path):
         Path where the trained model will be saved.
     """
     df = pd.read_csv(train_data_path)
-    features = df[["rainfall", "mean_temperature"]].fillna(0)
+    features = df[["rainfall"]].fillna(0)
     target = df["disease_cases"].fillna(0)
 
     model = LinearRegression()
